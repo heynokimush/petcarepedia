@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link href="http://localhost:9000/petcarepedia/images/foot_98DFFF.png" rel="shortcut icon" type="image/x-icon">
-<title>펫캐어피디아 | 로그인</title>
+<title>펫캐어피디아 | 아이디/비밀번호 찾기</title>
 <link rel="stylesheet" href="http://localhost:9000/petcarepedia/css/petcarepedia_song.css">
 <script src="http://localhost:9000/petcarepedia/js/jquery-3.6.4.min.js"></script>
 <script src="http://localhost:9000/petcarepedia/js/petcarepedia_jquery_song.js"></script>
@@ -28,7 +28,7 @@
 					<li><button type="button" id="btnLogin" class="btn-submit">로그인</button></li>
 					<li>
 						<a href="http://localhost:9000/petcarepedia/jsp/join/join.jsp">회원가입</a>
-						<a href="http://localhost:9000/petcarepedia/jsp/search/search_id.jsp">아이디 / 비밀번호 찾기</a>
+						<a href="#">아이디 / 비밀번호 찾기</a>
 					</li>
 				</ul>
 			</form>

@@ -7,8 +7,27 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/petcarepedia/css/petcarepedia_song.css">
+<script src="http://localhost:9000/petcarepedia/js/jquery-3.6.4.min.js"></script>
+<script src="http://localhost:9000/petcarepedia/js/petcarepedia_jquery_song.js"></script>
 </head>
 <body>
+	<div class="back"></div>
+	<div class="admin-login-modal">
+		<div class="admin-login-modal-close" id="btnModalClose">X</div>
+		<div class="title">
+			<p>관리자 로그인</p>
+		</div>
+		<div class="inputbox">
+			<form name="adminLoginForm" action="adminLoginProc.jsp" method="post">
+				<ul>
+					<li><input type="text" name="id" id="id" placeholder="아이디"></li>
+					<li><input type="password" name="pass" id="pass" placeholder="비밀번호"></li>
+					<li><button type="button" id="btnAdminLogin" class="btn-submit">로그인</button></li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	
 	<footer>
 		<div class="footer-menu">
 			<div class="footer-content">
@@ -27,7 +46,7 @@
 							<a href="#">위치기반서비스 이용약관</a>
 						</li>
 						<li>
-							<a href="#">관리자</a>
+							<a id="btnAdminModal">관리자</a>
 						</li>
 					</ul>
 				</div>

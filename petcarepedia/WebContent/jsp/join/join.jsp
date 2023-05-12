@@ -7,6 +7,8 @@
 <link href="http://localhost:9000/petcarepedia/images/foot_98DFFF.png" rel="shortcut icon" type="image/x-icon">
 <title>펫캐어피디아 | 회원가입</title>
 <link rel="stylesheet" href="http://localhost:9000/petcarepedia/css/petcarepedia_song.css">
+<script src="http://localhost:9000/petcarepedia/js/jquery-3.6.4.min.js"></script>
+<script src="http://localhost:9000/petcarepedia/js/petcarepedia_jquery_song.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -72,15 +74,28 @@
 						<input type="text" name="addr" id="addr" placeholder="주소 입력" class="input-short">
 						<button type="button" class="btn-short" id="btnSearchAddr">주소찾기</button>
 					</li>
-					<li>
+					<li class="terms">
 						<label>이용약관</label>
-						<input type="checkbox" name="term" value="all"><span>전체 동의</span>
-						<input type="checkbox" name="term" value="1"><span>이용약관 동의 <span class="ess">*</span></span>
-						<input type="checkbox" name="term" value="2"><span>개인정보 수집 및 이용 동의 <span class="ess">*</span></span>
-						<input type="checkbox" name="term" value="3"><span>[선택] 위치기반서비스 이용약관 동의</span>
-						<input type="checkbox" name="term" value="4"><span>[선택] 마케팅 정보 활용 및 수신 동의</span>
+						<ul>
+							<li>
+								<input type="checkbox" name="term" value="all"><span>전체 동의</span>
+							</li>
+							<li>
+								<input type="checkbox" name="term" value="1"><span>이용약관 동의 <span class="ess">*</span></span>
+							</li>
+							<li>
+								<input type="checkbox" name="term" value="2"><span>개인정보 수집 및 이용 동의 <span class="ess">*</span></span>
+							</li>
+							<li>
+								<input type="checkbox" name="term" value="3"><span>[선택] 위치기반서비스 이용약관 동의</span>
+							</li>
+							<li>
+								<input type="checkbox" name="term" value="4"><span>[선택] 마케팅 정보 활용 및 수신 동의</span>
+							</li>
+						</ul>
 					</li>
 					<li>
+						<button type="button" id="btnJoin-dis" class="btn-submit">회원가입</button>
 						<button type="button" id="btnJoin" class="btn-submit">회원가입</button>
 					</li>
 				</ul>
