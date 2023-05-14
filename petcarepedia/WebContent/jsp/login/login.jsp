@@ -28,7 +28,7 @@
 					<li><button type="button" id="btnLogin" class="btn-submit">로그인</button></li>
 					<li>
 						<a href="http://localhost:9000/petcarepedia/jsp/join/join.jsp">회원가입</a>
-						<a href="http://localhost:9000/petcarepedia/jsp/search/search_id.jsp">아이디 / 비밀번호 찾기</a>
+						<a href="http://localhost:9000/petcarepedia/jsp/login/login_idfind.jsp">아이디 / 비밀번호 찾기</a>
 					</li>
 				</ul>
 			</form>

@@ -16,19 +16,25 @@
 	
 	<!-- content -->
 	<div class="content">
-		<div class="search-content">
+		<div class="find-content">
 			<div class="content-logo">
 				<img src="http://localhost:9000/petcarepedia/images/contentlogo.png" width="300px">
 			</div>
 			
-			<form name="searchIdForm" action="searchIdProc.jsp" method="post">
-				<div class="search-box">
-					<div>
-						<div>아이디 찾기</div>
-						<div>비밀번호 재설정</div>
+			<form name="pwFindForm" action="login_pwfindProc.jsp" method="post">
+				<div class="find-box">
+					<div class="find-pw">
+						<div id="btnMenuIdFind">아이디 찾기</div>
+						<div id="btnMenuPwFind">비밀번호 재설정</div>
 					</div>
 					
+					<p>비밀번호를 재설정하려면 계정 정보를 입력해주세요.</p>
+					
 					<ul>
+						<li>
+							<label>아이디</label>
+							<input type="text" name="id" id="id" placeholder="아이디 입력">
+						</li>
 						<li>
 							<label>성명</label>
 							<input type="text" name="name" id="name" placeholder="성명 입력">
@@ -44,7 +50,7 @@
 							<input type="text" name="phone2" id="phone2" placeholder="1234" class="input-short2">
 							<input type="text" name="phone3" id="phone3" placeholder="5678" class="input-short2">
 						</li>
-						<li><button type="button" id="btnSearchId" class="btn-submit">아이디 찾기</button></li>
+						<li><button type="button" id="btnPwFind" class="btn-submit">계정 정보 확인</button></li>
 					</ul>
 				</div>
 			</form>

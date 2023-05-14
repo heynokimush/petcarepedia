@@ -6,6 +6,7 @@
 	}
 .btn-submit {
 	width:300px; height:50px;
+	display:block;
 	border:none;
 	border-radius: 5px;
 	background:#7AB2CC; color:white;
@@ -469,7 +470,7 @@
 		color:#FFB3BD;
 	}
 	.join-content input:focus,
-	.search-content input:focus {
+	.find-content input:focus {
 		border:1px solid #7AB2CC;
 	}
 	
@@ -478,17 +479,25 @@
 		list-style-type:none;
 	}
 	.join-content > form > ul > li,
-	.search-content ul > li {
-		height:100px;
+	.find-content ul > li {
+		margin-top:20px;
+		clear:both;
+	}
+	.find-content ul > li {
+		margin-bottom:20px;
+		margin-top:0px;
+	}
+	.join-content > form > ul > li > span {
+		display:none;
 	}
 	.join-content > form > ul > li > label,
-	.search-content ul > li > label {
+	.find-content ul > li > label {
 		display:block;
 		font-weight:bold;
 		clear:both;
 	}
 	.join-content > form > ul > li > input,
-	.search-content ul > li > input {
+	.find-content ul > li > input {
 		width:358px; height:50px;
 		border:1px solid #8A8A8A;
 		border-radius: 5px; outline:none;
@@ -496,42 +505,49 @@
 		clear:both;
 		margin-top:10px;
 	}
-	.search-content ul > li > input {
+	.find-content ul > li > input {
 		width:258px;
 	}
 	.join-content > form > ul > li > input.input-short {
 		width:258px;
-		float:left;
 	}
 	.join-content > form > ul > li > input.input-short2,
-	.search-content ul > li > input.input-short2 {
+	.find-content ul > li > input.input-short2 {
 		width:78px;
 		margin-right:15px;
 	}
-	.search-content ul > li > input.input-short2 {
+	.find-content ul > li > input.input-short2 {
 		width:48px; margin-right:10px;
 	}
 	.join-content > form > ul > li > input.input-short2:last-child,
-	.search-content ul > li > input.input-short2:last-child {
+	.find-content ul > li > input.input-short2:last-child {
 		margin-right:0px;
+		clear:both;
 	}
 	.join-content > form > ul > li > select,
-	.search-content ul > li > select {
+	.find-content ul > li > select {
 		width:120px; height:52px;
 		border:1px solid #8A8A8A;
 		border-radius: 5px; outline:none;
 		padding-left:10px; margin-right:15px;
 	}
-	.search-content ul > li > select {
+	.find-content ul > li > select {
 		width:90px; margin-right:10px;
 	}
 	
 	.join-content > form > ul > li:first-child > label {
-		float:left;
+		display:inline;
 	}
 	.join-content > form > ul > li:first-child > p {
-		float:right;
+		/* float:right; */
+		display:inline-block;
+		width:340px;
+		text-align:right;
 		font-size:12px;
+	}
+	.join-content > form > ul > li:first-child > button {
+		background:#D9D9D9;
+		cursor:not-allowed;
 	}
 	
 	.join-content > form > ul > li.terms {
@@ -551,6 +567,10 @@
 		margin-right:10px; width:18px; height:18px;
 		float:left;
 	}
+	.join-content > form > ul > li.terms > ul > li > span > a {
+		color:#636363; text-decoration:underline;
+		cursor:pointer;
+	}
 	.join-content > form > ul > li.terms > ul > li:first-child {
 		padding-bottom:15px; margin-bottom:15px;
 		border-bottom:1px solid #8A8A8A;
@@ -561,14 +581,10 @@
 		width:100%; display:flex; justify-content:center;
 		margin-top:40px;
 	}
-	.join-content > form > ul > li:last-child > button#btnJoin-dis {
+	.join-content > form > ul > li:last-child > button#btnJoin {
 		background:#D9D9D9;
 		cursor:not-allowed;
 	}
-	.join-content > form > ul > li:last-child > button#btnJoin {
-		display:none;
-	}
-	
 	
 	/* admin-login-modal */
 	.admin-login-modal {
@@ -578,7 +594,6 @@
 	    width:460px; height:410px;
 	    background:white;
 	    border-radius:5px;
-	    box-shadow:0 5px 20px rgba(0, 0, 0, 0.8);
 	    z-index: 1;
 	    display:none;
 	    padding:20px;
@@ -609,42 +624,96 @@
 	  display:none;
 	}
 	
-	/* search-style */
-	.search-content {
+	/* find-style */
+	.find-content {
 		width:600px;
 		margin:100px auto;
 		color:#636363;
 		font-size:14px;
 	}
-	.search-box {
+	.find-box {
 		width:100%;
 		border:1px solid #98dfff; border-radius:10px;
 	}
 	
-	.search-box > div {
+	.find-box > div {
 		width:100%; height:60px; clear:both;
 		background:#F2F2F2; border-radius:10px 10px 0 0;
 		margin-bottom:30px;
 	}
-	.search-box > div > div:last-child:hover {
-		cursor:pointer; opacity:0.7;
+	.find-box > div > div:hover {
+		cursor:pointer;
 	}
-	.search-box > div > div {
+	.find-box > div > div {
 		float:left; width:299px;
 		text-align:center; padding:18px 0;
 		border-radius:10px 10px 0 0;
 		font-size:18px; font-weight:bold;
 	}
-	.search-box > div > div:first-child {
+	.find-box > div > div:first-child {
 		background:white; color:#7AB2CC;
 		border-right:1px solid #98dfff;
 	}
-	.search-box > div > div:last-child {
+	.find-box > div > div:last-child {
 		border-bottom:1px solid #98dfff;
 	}
 	
-	.search-box > ul {
+	.find-box > p {
+		font-size:14px; font-weight:bold;
+		color:#7AB2CC; text-align:center;
+		width:100%; padding-top:20px;
+	}
+	
+	.find-box > div.find-pw > div:first-child {
+		border-right:none;
+		border-bottom:1px solid #98dfff;
+		background:none; color:#8A8A8A;
+	}
+	.find-box > div.find-pw > div:last-child {
+		background:white; color:#7AB2CC;
+		border-left:1px solid #98dfff;
+		border-bottom:none;
+	}
+	
+	.find-box > ul {
 		width:300px;
 		list-style-type:none;
 		margin:auto;
+		padding-top:20px;
+	}
+	.find-box > ul.find-fail {
+		width:440px;
+		list-style-type:none;
+		margin:auto;
+	}
+	.find-box > ul > li.find-success {
+		padding:60px 0;
+		text-align:center;
+		font-size:15px; font-weight:bold;
+		color:#7AB2CC;
+	}
+	.find-box > ul > li.find-success > p {
+		margin-bottom:20px;
+	}
+	.find-box > ul > li.find-success > p:nth-child(2){
+		font-size:18px;
+		color:#3D3D3D;
+	}
+	
+	.find-box > ul > li.find-fail,
+	.find-box > ul > li.update-success {
+		padding:30px 0 60px 0;
+		text-align:center;
+		font-size:15px; font-weight:bold;
+		color:#7AB2CC;
+		margin-bottom:30px;
+	}
+	.find-box > ul > li.find-fail > p,
+	.find-box > ul > li.update-success > p {
+		margin-top:20px;
+	}
+	
+	.find-box > ul > li.find-fail+li > button {
+		width:200px; float:left;
+		margin:10px;
 	}
