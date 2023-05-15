@@ -195,7 +195,7 @@ $(document).ready(function(){
 	
 	
 	//관리자 로그인 모달
-	$("#btnAdminModal").click(function(){
+	/*$("#btnAdminModal").click(function(){
 		$(".admin-login-modal").show();
 		$(".back").show();
 	})
@@ -203,7 +203,7 @@ $(document).ready(function(){
 	$("#btnModalClose").click(function(){
 		$(".admin-login-modal").hide();
 		$(".back").hide();
-	})
+	})*/
 }); //ready
 
 

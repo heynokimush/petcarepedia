@@ -11,7 +11,7 @@
 <script src="http://localhost:9000/petcarepedia/js/petcarepedia_jquery_song.js"></script>
 </head>
 <body>
-	<div class="back"></div>
+	<!-- <div class="back"></div>
 	<div class="admin-login-modal">
 		<div class="admin-login-modal-close" id="btnModalClose">X</div>
 		<div class="title">
@@ -26,7 +26,7 @@
 				</ul>
 			</form>
 		</div>
-	</div>
+	</div> -->
 	
 	<footer>
 		<div class="footer-menu">
