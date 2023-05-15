@@ -660,7 +660,7 @@
 	.find-box > p {
 		font-size:14px; font-weight:bold;
 		color:#7AB2CC; text-align:center;
-		width:100%; padding-top:20px;
+		width:100%;
 	}
 	
 	.find-box > div.find-pw > div:first-child {
