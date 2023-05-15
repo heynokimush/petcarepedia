@@ -123,7 +123,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	function joinValidationCheck() {
+	$.joinValidationCheck = function() {
 		if($("#idcheck_msg").text() == "사용 가능한 아이디입니다."
 			&& $("#pwcheck_msg").text() == "안전한 비밀번호입니다."
 			&& $("#cpwcheck_msg").text() == "비밀번호가 일치합니다."
@@ -139,46 +139,16 @@ $(document).ready(function(){
 	}
 	//회원가입 버튼 abled
 	$("form[name='joinForm'] input").blur(function(){
-		if($("#idcheck_msg").text() == "사용 가능한 아이디입니다."
-			&& $("#pwcheck_msg").text() == "안전한 비밀번호입니다."
-			&& $("#cpwcheck_msg").text() == "비밀번호가 일치합니다."
-			&& $("form[name='joinForm'] #name").val() != ""
-			&& $("form[name='joinForm'] #phone1").val() != "default"
-			&& $("form[name='joinForm'] #phone2").val() != ""
-			&& $("form[name='joinForm'] #phone3").val() != ""
-			&& $("#term1").is(':checked') && $("#term2").is(':checked')){
-			$("#btnJoin").attr("disabled",false).css("background","#7AB2CC").css("cursor","pointer");
-		} else {
-			$("#btnJoin").attr("disabled",true).css("background","#D9D9D9").css("cursor","not-allowed");
-		}
+		$.joinValidationCheck();
+	});
+	$("form[name='joinForm'] input").focus(function(){
+		$.joinValidationCheck();
 	});
 	$("form[name='joinForm'] input").click(function(){
-		if($("#idcheck_msg").text() == "사용 가능한 아이디입니다."
-			&& $("#pwcheck_msg").text() == "안전한 비밀번호입니다."
-			&& $("#cpwcheck_msg").text() == "비밀번호가 일치합니다."
-			&& $("form[name='joinForm'] #name").val() != ""
-			&& $("form[name='joinForm'] #phone1").val() != "default"
-			&& $("form[name='joinForm'] #phone2").val() != ""
-			&& $("form[name='joinForm'] #phone3").val() != ""
-			&& $("#term1").is(':checked') && $("#term2").is(':checked')){
-			$("#btnJoin").attr("disabled",false).css("background","#7AB2CC").css("cursor","pointer");
-		} else {
-			$("#btnJoin").attr("disabled",true).css("background","#D9D9D9").css("cursor","not-allowed");
-		}
+		$.joinValidationCheck();
 	});
 	$("form[name='joinForm'] input").keyup(function(){
-		if($("#idcheck_msg").text() == "사용 가능한 아이디입니다."
-			&& $("#pwcheck_msg").text() == "안전한 비밀번호입니다."
-			&& $("#cpwcheck_msg").text() == "비밀번호가 일치합니다."
-			&& $("form[name='joinForm'] #name").val() != ""
-			&& $("form[name='joinForm'] #phone1").val() != "default"
-			&& $("form[name='joinForm'] #phone2").val() != ""
-			&& $("form[name='joinForm'] #phone3").val() != ""
-			&& $("#term1").is(':checked') && $("#term2").is(':checked')){
-			$("#btnJoin").attr("disabled",false).css("background","#7AB2CC").css("cursor","pointer");
-		} else {
-			$("#btnJoin").attr("disabled",true).css("background","#D9D9D9").css("cursor","not-allowed");
-		}
+		$.joinValidationCheck();
 	});
 	
 	
@@ -213,7 +183,7 @@ $(document).ready(function(){
 		location.href = "login.jsp";
 	})
 	$('#btnBackJoin').click(function(){
-		location.href = "http://localhost:9000/petcarepedia/jsp/join/join.jsp";
+		location.href = "http://localhost:9000/petcarepedia/join/join.jsp";
 	})
 	
 	$('#btnMenuIdFind').click(function(){

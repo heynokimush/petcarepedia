@@ -412,7 +412,7 @@
 	.main-map > div.map-content > div.map {
 		border:1px solid #98dfff; border-radius:10px;
 		width:640px; height:420px;
-		float:right;
+		float:right; z-index:-1;
 	}
 	
 	
@@ -612,7 +612,6 @@
 		width:100%; margin-top:50px;
 		display:flex; justify-content:center;
 	}
-	
 	.back {
 	  content: "";
 	  position: fixed;
@@ -706,14 +705,18 @@
 		text-align:center;
 		font-size:15px; font-weight:bold;
 		color:#7AB2CC;
-		margin-bottom:30px;
+		margin-bottom:20px;
 	}
 	.find-box > ul > li.find-fail > p,
 	.find-box > ul > li.update-success > p {
 		margin-top:20px;
 	}
-	
+	.find-box > ul > li.find-fail+li {
+		clear:both;
+		width:100%;
+		height:50px;
+	}
 	.find-box > ul > li.find-fail+li > button {
 		width:200px; float:left;
-		margin:10px;
+		margin:0 10px;
 	}
